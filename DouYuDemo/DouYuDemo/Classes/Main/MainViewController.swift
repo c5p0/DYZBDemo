@@ -12,6 +12,7 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 添加自控制器
         addChildController(vcName: "Home");
         addChildController(vcName: "Live");
         addChildController(vcName: "Care");
