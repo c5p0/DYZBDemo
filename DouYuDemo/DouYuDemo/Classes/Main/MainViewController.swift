@@ -16,12 +16,7 @@ class MainViewController: UITabBarController {
         addChildController(vcName: "Home");
         addChildController(vcName: "Live");
         addChildController(vcName: "Care");
-        addChildController(vcName: "Profile");
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        addChildController(vcName: "Profile");        
     }
     
     private func addChildController(vcName :String)
