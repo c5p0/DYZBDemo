@@ -16,7 +16,8 @@ class MainViewController: UITabBarController {
         addChildController(vcName: "Home");
         addChildController(vcName: "Live");
         addChildController(vcName: "Care");
-        addChildController(vcName: "Profile");        
+        addChildController(vcName: "Profile"); 
+	// GG思密达       
     }
     
     private func addChildController(vcName :String)
