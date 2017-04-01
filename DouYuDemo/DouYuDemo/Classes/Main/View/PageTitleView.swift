@@ -12,8 +12,8 @@ protocol PageTitleViewDelegate: class{
     func pageTitleView(_ titleView : PageTitleView, selectedIndex index : Int)
 }
 private let kscrollLineH : CGFloat = 2
-private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (51, 51, 51)
+private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 153, 0)
 private var currentIndex : Int = 0
 class PageTitleView: UIView {
     
@@ -126,6 +126,10 @@ extension PageTitleView{
         
         // 设置渐变颜色
         let colorDelta = (kSelectColor.0 - kNormalColor.0,kSelectColor.1 - kNormalColor.1,kSelectColor.2 - kNormalColor.2)
+        print(kSelectColor.2 - colorDelta.2 * progress);
+        print(kSelectColor.1 - colorDelta.1 * progress);
+        print(kSelectColor.2 - colorDelta.2 * progress);
+        
         sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
         currentIndex = targetIndex
